@@ -48,6 +48,7 @@ patch("assets/app.mjs", [
    '    if (sl) {\n' +
    '      sl.id = "f-ingreso"; sl.removeAttribute("name");\n' +
    '      sl.innerHTML = \'<option value="">Cualquier fecha</option><option value="1">Hoy</option><option value="7">Últimos 7 días</option><option value="15">Últimos 15 días</option><option value="30">Últimos 30 días</option>\';\n' +
+   '      sl.value = state.ingreso ? String(state.ingreso) : "";\n' +
    '      const lb = w.querySelector("label");\n' +
    '      if (lb) { lb.htmlFor = "f-ingreso"; lb.textContent = "Ingresó"; }\n' +
    '      fdw.insertAdjacentElement("afterend", w);\n' +
